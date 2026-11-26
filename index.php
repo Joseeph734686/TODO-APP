@@ -106,6 +106,8 @@ while ($row = $result->fetch_assoc()) {
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <title>Todo List</title>
 
@@ -119,7 +121,7 @@ while ($row = $result->fetch_assoc()) {
 
     <nav class="navbar">
         <div class="container">
-            <h2>TodoList</h2>
+            <h2>TodoList  </h2>
         </div>
     </nav>
 
@@ -130,7 +132,7 @@ while ($row = $result->fetch_assoc()) {
 
         <section class="todo-container">
 
-            <h1>My Todo List</h1>
+            <h1>My Todo List <i class="fa-solid fa-list"></i></h1>
 
             <p class="subtitle">
                 Organize your day, one task at a time.
@@ -154,7 +156,7 @@ while ($row = $result->fetch_assoc()) {
                     value="new"
                     class="add-btn"
                 >
-                    Add Task
+                    Add Task <i class="fa-solid fa-plus"></i>
                 </button>
 
             </form>
@@ -195,8 +197,8 @@ while ($row = $result->fetch_assoc()) {
                                 class="toggle-btn"
                             >
                                 <?php echo $tache['done']
-                                    ? 'Undo'
-                                    : 'Done'; ?>
+                                    ? 'Undo <i class="fa-solid fa-arrow-rotate-left"></i>' 
+                                    : 'Done <i class="fa-solid fa-check"></i>'; ?>
                             </button>
 
                             <button
@@ -206,7 +208,7 @@ while ($row = $result->fetch_assoc()) {
                                 class="delete-btn"
                                 onclick="return confirm('Delete this task?')"
                             >
-                                Delete
+                                Delete <i class="fa-solid fa-trash"></i>
                             </button>
 
                         </form>
