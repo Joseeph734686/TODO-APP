@@ -53,9 +53,6 @@ if (isset($_POST['action']) && $_POST['action'] == 'delete') {
 }
 
 
-// ======================================
-// 4. TOGGLE - CHANGE STATUS
-// ======================================
 
 if (isset($_POST['action']) && $_POST['action'] == 'toggle') {
 
@@ -71,9 +68,6 @@ if (isset($_POST['action']) && $_POST['action'] == 'toggle') {
 }
 
 
-// ======================================
-// 5. REDIRECT AFTER POST
-// ======================================
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -82,9 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 
-// ======================================
-// 6. READ TASKS
-// ======================================
 
 $result = $conn->query(
     "SELECT * FROM todo"
@@ -117,7 +108,6 @@ while ($row = $result->fetch_assoc()) {
 
 <body>
 
-    <!-- NAVBAR -->
 
     <nav class="navbar">
         <div class="container">
@@ -126,7 +116,6 @@ while ($row = $result->fetch_assoc()) {
     </nav>
 
 
-    <!-- MAIN CONTENT -->
 
     <main class="container">
 
